@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #161A30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #9EC8B9;
+    margin: 0;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #68d9d9;
+}
+
+#typed-text {
+  text-align: left;
+  margin-right: 1em;
+}
+
+#typed-text::after {
+  content: ' ▌';
+  animation: blinkCursor 0.9s infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: inherit;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 0.15em;
+}
+
+a:hover {
+  opacity: 85%;
+  transition: opacity 0.4s ease; /* Smooth transition for color change */
+  text-decoration: underline;
+}
+  
+nav {
+  text-align: right;
+}
+
+nav, .circle-mask img, .flex_home > div:nth-child(3) {
+  margin: auto;
+}
+
+div:nth-child(3) {
+  padding-left: 0.8em;
+}
+
+.flex_home {
+  display: flex;
+}
+
+.flex_home > div {
+  flex: 1;
+  margin: 0.1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle-mask {
+  width: 9em;
+  height: 9em;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle-mask img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #161A30;
+  z-index: -1;
+}
