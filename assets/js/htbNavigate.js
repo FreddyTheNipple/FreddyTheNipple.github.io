@@ -4,15 +4,15 @@ var htbOtherDiv = document.getElementById("htbOther");
 
 document.addEventListener("DOMContentLoaded", function () {
     htbLinuxDiv.addEventListener("click", function () {
-      navigateToPage("htb_linux.html");
+      navigateToPage("htbList.html?os=Linux");
     });
   
     htbWindowsDiv.addEventListener("click", function () {
-      navigateToPage("htb_windows.html");
+      navigateToPage("htbList.html?os=Windows");
     });
   
     htbOtherDiv.addEventListener("click", function () {
-      navigateToPage("htb_other.html");
+      navigateToPage("htbList.html?os=Other");
     });
   });
 
