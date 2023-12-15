@@ -17,6 +17,21 @@ body {
     align-items: center;
 }
 
+main, nav {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 /* Home */
 
 h1 {
@@ -113,11 +128,7 @@ a:hover {
 
 /* roadmap */
 
-.roadmap main {
-  animation: slideDown 0.8s ease-out;
-}
-
-.roadmap nav, .htb nav {
+.navSubPages {
   position: absolute;
   left: 0;
   padding-left: 1em;
@@ -178,7 +189,7 @@ a:hover {
   background-color: transparent; /* Make the background transparent */
   content: '';
   border-left: 4px dotted #9EC8B9; /* Create a dotted line */
-  animation: animatedLine 0.6s linear forwards; /* Adjust the animation duration and timing function */
+  animation: animatedLine 0.5s linear forwards; /* Adjust the animation duration and timing function */
 }
 
 @keyframes animatedLine {
@@ -192,24 +203,13 @@ a:hover {
   }
 }
 
-@keyframes slideDown {
-  from {
-      transform: translateY(-100%);
-      opacity: 0;
-  }
-  to {
-      transform: translateY(0);
-      opacity: 1;
-  }
-}
-
 /* htb */
 
 .htb main {
   display:flex;
-  justify-content: center;
-  width: 100%;
-  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  width: 78%;
   flex-wrap: wrap;
 }
 
@@ -230,12 +230,9 @@ a:hover {
   width: 23em;
   height: 15em;
   cursor: pointer;
+  margin-bottom: 1em;
 }
 
 .htb main > div:hover {
   transform: scale(1.05);
-}
-
-.htb main > div:not(:last-child) {
-  margin-right: 1em;
 }
