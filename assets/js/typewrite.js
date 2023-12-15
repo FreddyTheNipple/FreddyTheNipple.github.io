@@ -6,6 +6,7 @@ var typeElement = document.getElementById("typed-text");
 document.addEventListener("DOMContentLoaded", () => {
   if (typeElement) {
       if (currentURL.endsWith('index.html')) { typeWriter("Frédéric Goossens"); }
+      if (window.location.pathname('/')) { typeWriter("Frédéric Goossens"); }
       if (currentURL.endsWith('rastalabs.html')) { typeWriter('HTB – Pro Lab: Rastalabs'); }
   }
 });
