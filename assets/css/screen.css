@@ -1,13 +1,23 @@
+/* Main stuff */
+
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'FiraCode', sans-serif;
     background-color: #161A30;
+    height: 100vh;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: white;
 }
+
+/* Home */
 
 h1 {
     font-size: 3rem;
@@ -17,12 +27,10 @@ h1 {
 
 p {
     font-size: 1.25rem;
-    color: #68d9d9;
 }
 
 #typed-text {
   text-align: left;
-  margin-right: 1em;
 }
 
 #typed-text::after {
@@ -54,11 +62,11 @@ a:hover {
   text-decoration: underline;
 }
   
-nav {
+.flex_home nav {
   text-align: right;
 }
 
-nav, .circle-mask img, .flex_home > div:nth-child(3) {
+.flex_home nav, .circle-mask img, .flex_home > div:nth-child(3) {
   margin: auto;
 }
 
@@ -101,4 +109,114 @@ div:nth-child(3) {
   height: 100%;
   background-color: #161A30;
   z-index: -1;
+}
+
+/* roadmap */
+
+.roadmap main {
+  animation: slideDown 0.8s ease-out;
+}
+
+.roadmap nav {
+  position: absolute;
+  left: 0;
+  padding-left: 1em;
+}
+
+.circle-mask-2 {
+  width: 5em;
+  height: 5em;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle-mask-2 img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.roadmap main > div {
+  width: 25em;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  margin-bottom: 4em;
+}
+
+.roadmap .circle-mask-2 {
+  margin-right: 0.5em; /* Adjust the margin as needed */
+}
+
+.roadmap main p {
+  margin: 0; /* Remove default margin for paragraphs */
+}
+
+.roadmap main p {
+  color: white;
+  border-bottom: 1px solid white; /* Add a bottom border as an underline */
+  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
+}
+.roadmap main > div:nth-child(3) {
+  padding-left: 0;
+}
+
+.roadmap main > div {
+  position: relative;
+}
+
+.roadmap main > div:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Position the line at the bottom of the div */
+  left: 50%; /* Position the line in the middle of the div */
+  transform: translateX(-50%); /* Center the line horizontally */
+  width: 4px; /* Adjust the thickness of the line */
+  height: 80px; /* Adjust the height of the line */
+  background-color: transparent; /* Make the background transparent */
+  content: '';
+  border-left: 4px dotted #9EC8B9; /* Create a dotted line */
+  animation: animatedLine 0.6s linear forwards; /* Adjust the animation duration and timing function */
+}
+
+@keyframes animatedLine {
+  from {
+    height: 0;
+    opacity: 0; /* Initial opacity */
+  }
+  to {
+    height: 4em; /* Adjust the final height of the line */
+    opacity: 1; /* Final opacity */
+  }
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* htb */
+
+.htb {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.htb div {
+  border: 1px solid white;
+  width: 23em;
+  height: 15em;
+}
+
+.htb div:not(:last-child) {
+  margin-right: 5em;
 }

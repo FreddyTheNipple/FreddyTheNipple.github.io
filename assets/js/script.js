@@ -2,8 +2,12 @@ var i = 0;
 var txt = 'Frédéric Goossens';
 var speed = 70;
 
+var typeElement = document.getElementById("typed-text");
+
 document.addEventListener("DOMContentLoaded", function () {
+  if (typeElement) {
     typeWriter();
+  }
 
     particlesJS('particles-js', {
         particles: {
