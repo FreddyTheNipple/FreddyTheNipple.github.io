@@ -209,7 +209,7 @@ a:hover {
   display:flex;
   justify-content: space-around;
   align-items: center;
-  width: 78%;
+  width: 75em;
   flex-wrap: wrap;
 }
 
@@ -235,4 +235,27 @@ a:hover {
 
 .htb main > div:hover {
   transform: scale(1.05);
+}
+
+#boxList {
+  text-align: center;
+}
+
+pre {
+  margin-top: 2.1em;
+  color: #9EC8B9;
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  bottom: 1em;
+  text-align: center;
+  width: 38%;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.8rem;
 }
