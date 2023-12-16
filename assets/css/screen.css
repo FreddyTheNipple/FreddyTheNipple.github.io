@@ -287,6 +287,14 @@ footer p {
   margin-bottom: 2em;
 }
 
+.blogpost section {
+  margin-bottom: 2em;
+}
+
+.blogpost section:last-child {
+  margin-bottom: 20%;
+}
+
 .blogpost p {
   font-size: 1rem;
   margin-bottom: 0.5em;
@@ -302,6 +310,7 @@ footer p {
 
 .blogpost h1 {
   font-weight: bolder;
+  font-size: 2.5rem;
 }
 
 .blogpost img {
@@ -309,6 +318,14 @@ footer p {
   margin: 2em auto;
 }
 
-.blogpost a {
-  margin-bottom: 0.5em;
+.blogpost #info {
+  display:flex;
+  justify-content: space-between;
+  width: 85%;
+  flex-wrap: wrap;
+  margin-bottom: 1%;
+}
+
+.blogpost span {
+  display: block;
 }
