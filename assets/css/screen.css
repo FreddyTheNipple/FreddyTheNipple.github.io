@@ -329,3 +329,54 @@ footer p {
 .blogpost span {
   display: block;
 }
+
+/* mobile nav */
+
+.hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .hamburger-menu {
+    display: block;
+  }  
+
+  .hidden {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid white; /* Add a bottom border as an underline */
+    text-align: left;
+    padding: 0.15em 0;
+  }
+
+  nav ul li:first-child {
+    border-top: 1px solid white; /* Add a bottom border as an underline */
+  }
+
+  nav ul li a {
+    margin-left: 0.2em;
+  }
+
+  nav ul li a:hover {
+    text-decoration: none;
+  }
+
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 1.5em;
+    font-size: 2rem;
+    left: 0;
+  }
+}
