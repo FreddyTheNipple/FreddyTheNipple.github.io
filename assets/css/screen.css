@@ -49,6 +49,18 @@ body {
   }
 }
 
+@keyframes fadeInMobileNav {
+  from {
+      opacity: 0;
+      transform: translateX(-40px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+
 /* Home */
 
 h1 {
@@ -390,18 +402,22 @@ footer p {
 
   nav {
     z-index: 1;
-    background: rgba(0, 0, 0, 0.8);
+  }
+
+  nav ul {
+    background: #242840;
+    animation: fadeInMobileNav 0.2s ease-out;
+    z-index: 2;
   }
 
   nav ul li {
-    border-bottom: 1px solid white; /* Add a bottom border as an underline */
-    text-align: left;
-    padding: 0.15em 0;
-    color: #9EC8B9;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 0.30em 0;
   }
 
   nav ul li:first-child {
-    border-top: 1px solid white; /* Add a bottom border as an underline */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   nav ul li a {
