@@ -502,4 +502,8 @@ footer p {
     scale: 0.9;
     margin: auto;
   }
+
+  ul li a {
+    width: 100%;
+  }
 }
