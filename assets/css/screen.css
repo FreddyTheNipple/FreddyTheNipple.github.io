@@ -334,13 +334,13 @@ footer p {
 
 .hamburger-menu {
   display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
 }
 
 @media screen and (max-width: 768px) {
-
-  .hamburger-menu {
-    display: block;
-  }  
 
   .hidden {
     display: none;
@@ -348,10 +348,14 @@ footer p {
 
   .hamburger-menu {
     display: block;
-    cursor: pointer;
-    position: fixed;
-    top: 10px;
-    left: 10px;
+  }  
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav {
+    background: rgba(0, 0, 0, 0.4);
   }
 
   nav ul li {
@@ -376,7 +380,7 @@ footer p {
     width: 100%;
     position: absolute;
     top: 1.5em;
-    font-size: 2rem;
+    font-size: 1.7rem;
     left: 0;
   }
 }
