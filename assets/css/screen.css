@@ -132,8 +132,7 @@ a:hover {
   position: absolute;
   left: 0;
   padding-left: 1em;
-}
-
+} 
 .circle-mask-2 {
   width: 5em;
   height: 5em;
@@ -342,20 +341,21 @@ footer p {
 
 @media screen and (max-width: 768px) {
 
+  .navSubPages {
+    padding-left: 0;
+    z-index: 1;
+  }
+
   .hidden {
     display: none;
   }
 
   .hamburger-menu {
     display: block;
-  }  
-
-  .hamburger-menu {
-    display: block;
   }
 
   nav {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.9);
   }
 
   nav ul li {
@@ -382,5 +382,35 @@ footer p {
     top: 1.5em;
     font-size: 1.7rem;
     left: 0;
+  }
+
+  .htb main {
+    padding-top: 4em;
+  }
+
+  .home main {
+    padding-right: 5em;
+  }
+
+  footer {
+    font-size: 2rem;
+  }
+
+  .blogpost main {
+    width: 95%;
+  }
+
+  .blogpost img {
+    width: 100%;
+  }
+
+  .blogpost h1 {
+    margin-top: 1em;
+  }
+
+  .blogpost #info {
+    width: 60%;
+    margin-top: 2em;
+    line-height: 1.3;
   }
 }
