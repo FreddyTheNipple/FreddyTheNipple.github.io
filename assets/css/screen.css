@@ -17,8 +17,16 @@ body {
     align-items: center;
 }
 
-main, nav {
-  animation: fadeIn 1s ease-out;
+@media screen and (min-width: 768px) {
+  main, nav {
+    animation: fadeIn 1s ease-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main, nav {
+    animation: fadeInMobile 1s ease-out;
+  }
 }
 
 @keyframes fadeIn {
@@ -29,6 +37,15 @@ main, nav {
   to {
       opacity: 1;
       transform: translateY(0);
+  }
+}
+
+@keyframes fadeInMobile {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
   }
 }
 
@@ -232,8 +249,10 @@ a:hover {
   margin-bottom: 1em;
 }
 
-.htb main > div:hover, .blogs main > div:hover {
-  transform: scale(1.05);
+@media screen and (min-width: 768px) {
+  .htb main > div:hover, .blogs main > div:hover {
+    transform: scale(1.05);
+  }
 }
 
 #boxList {
@@ -278,8 +297,8 @@ footer p {
 
 .blogpost main {
   width: 60%;
-  height: 100%;
-  margin-top: 10%;
+  height: 60%;
+  margin-bottom: 10%;
 }
 
 .blogpost section {
@@ -334,9 +353,10 @@ footer p {
 .hamburger-menu {
   display: none;
   cursor: pointer;
-  position: fixed;
-  top: 10px;
-  left: 10px;
+  position: absolute;
+  top: -1.3em;
+  left: 0.7em;
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -362,6 +382,7 @@ footer p {
     border-bottom: 1px solid white; /* Add a bottom border as an underline */
     text-align: left;
     padding: 0.15em 0;
+    color: #9EC8B9;
   }
 
   nav ul li:first-child {
@@ -379,7 +400,7 @@ footer p {
   nav {
     width: 100%;
     position: absolute;
-    top: 1.5em;
+    top: 2.4em;
     font-size: 1.7rem;
     left: 0;
   }
@@ -389,15 +410,26 @@ footer p {
   }
 
   .home main {
-    padding-right: 5em;
+    display: block;
+  }
+
+  .home .circle-mask {
+    margin: 0 auto;
+    width: 8em;
   }
 
   footer {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    width: 100%;
   }
 
   .blogpost main {
     width: 95%;
+    margin-bottom: 35%;
+  }
+
+  .htb main {
+    height: 88%;
   }
 
   .blogpost img {
@@ -406,11 +438,16 @@ footer p {
 
   .blogpost h1 {
     margin-top: 1em;
+    font-size: 1.7rem;
   }
 
   .blogpost #info {
-    width: 60%;
-    margin-top: 2em;
+    display: block;
     line-height: 1.3;
+  }
+
+  .roadmap main {
+    scale: 0.9;
+    margin: auto;
   }
 }
