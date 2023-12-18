@@ -233,7 +233,7 @@ a:hover {
 
 /* htb */
 
-.htb main, .blogs main, .useCases main {
+.htb main, .blogs main, .usecases main {
   display:flex;
   justify-content: space-around;
   align-items: center;
@@ -241,11 +241,11 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.htb main > div > div, .blogs main > div > div:not(.blog-mask) {
+.htb main > div > div, .blogs main > div > div:not(.blog-mask), .usecases main > div > div:not(.usecase-mask) {
   border-bottom: 1px solid white;
 }
 
-.htb main > div > div p, .blogs main > div > div p {
+.htb main > div > div p, .blogs main > div > div p, .usecases main > div > div p {
   margin: 0.3em 0 0.3em 0.5em;
   font-size: 1rem;
   background: url('../images/cross.png') right/cover no-repeat;
@@ -253,7 +253,7 @@ a:hover {
   width: 97%;
 }
 
-.htb main > div, .blogs main > div {
+.htb main > div, .blogs main > div, .usecases main > div {
   border: 1px solid white;
   width: 23em;
   height: 15em;
@@ -262,8 +262,17 @@ a:hover {
 }
 
 @media screen and (min-width: 768px) {
-  .htb main > div:hover, .blogs main > div:hover {
-    transform: scale(1.05);
+  .htb main > div:hover, .blogs main > div:hover, .usecases main > div:hover  {
+    animation: hoverWindow 0.3s linear forwards;
+  }
+}
+
+@keyframes hoverWindow {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.05);
   }
 }
 
@@ -387,6 +396,22 @@ footer p {
 
 @media screen and (max-width: 768px) {
 
+  .roadmap {
+    height: 112vh;
+  }
+
+  .htb {
+    height: 140vh;
+  }
+
+  .usecases {
+    height: 185vh;
+  }
+
+  .blogs {
+    height: 110vh;
+  }
+
   .navSubPages {
     padding-left: 0;
     z-index: 1;
@@ -457,10 +482,6 @@ footer p {
   .blogpost main {
     width: 95%;
     margin-bottom: 35%;
-  }
-
-  .htb main {
-    height: 88%;
   }
 
   .blogpost img {
