@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currentURL.endsWith('index.html')) { typeWriter("Frédéric Goossens"); }
       if (window.location.pathname === '/') { typeWriter("Frédéric Goossens"); }
       if (currentURL.endsWith('rastalabs.html')) { typeWriter('HTB – Pro Lab: Rastalabs'); }
+      if (currentURL.endsWith('ai-ndhoven.html')) { typeWriter('AI-ndhoven'); }
   }
 });
 
